@@ -55,6 +55,11 @@ export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
+# Fedora has issues with no seeing smartcards until after this service is restarted
+if [[ $(uname) == 'Linux' ]] {
+    alias fixgpg="sudo service pcscd restart"
+}
+
 # Wireguard goodies
 if [[ $(uname) == 'Linux' ]] {
     alias wgup="nmcli connection up wg0"
