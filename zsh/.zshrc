@@ -32,7 +32,7 @@ zstyle ':completion:*' menu select
 #. $ZDOTDIR/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ZSH Prompt
-fpath+=$ZDOTDIR/.zfunctions
+fpath+=$ZDOTDIR/lib/prompt_setup
 autoload -U promptinit; promptinit
 prompt spaceship
 
