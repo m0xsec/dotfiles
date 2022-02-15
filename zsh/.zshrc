@@ -14,8 +14,6 @@ setopt hist_ignore_all_dups # No dupes in history
 setopt hist_verify # Confirm !!
 setopt no_clobber # Enforce >! or >|
 zstyle ':completion:*' menu select
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 # User-scoped machine-local ZSH function path.
 # For example, on macOS, Brew's rustup-init puts binaries in ~/.cargo
@@ -33,8 +31,12 @@ bindkey '^[[B' history-substring-search-down
 #. $ZDOTDIR/lib/zsh-autosuggestions/zsh-autosuggestions.zsh
 #. $ZDOTDIR/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# ZSH Prompt
+fpath+=$ZDOTDIR/.zfunctions
+autoload -U promptinit; promptinit
+prompt spaceship
+
 # ZSH Plugins
-fpath+=$ZDOTDIR/lib/spaceship-prompt
 fpath+=$ZDOTDIR/lib/zsh-completions/src
 fpath+=$ZDOTDIR/lib/
 
@@ -44,6 +46,9 @@ fpath+=$ZDOTDIR/lib/
 . $ZDOTDIR/lib/zsh-async/async.zsh
 . $ZDOTDIR/lib/zsh-history-substring-search/zsh-history-substring-search.zsh
 . $ZDOTDIR/lib/zsh-rustup-completion/rustup.plugin.zsh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # GPG SSH Agent
 export GPG_TTY="$(tty)"
