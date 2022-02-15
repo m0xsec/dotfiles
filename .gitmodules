@@ -1,0 +1,21 @@
+[submodule "zsh/lib/zsh-autosuggestions"]
+	path = zsh/lib/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/lib/zsh-completions"]
+	path = zsh/lib/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule "zsh/lib/zsh-history-substring-search"]
+	path = zsh/lib/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search
+[submodule "zsh/lib/zsh-async"]
+	path = zsh/lib/zsh-async
+	url = https://github.com/mafredri/zsh-async
+[submodule "zsh/lib/alias-tips"]
+	path = zsh/lib/alias-tips
+	url = https://github.com/djui/alias-tips
+[submodule "zsh/lib/zsh-rustup-completion"]
+	path = zsh/lib/zsh-rustup-completion
+	url = https://github.com/pkulev/zsh-rustup-completion
+[submodule "zsh/lib/spaceship-prompt"]
+	path = zsh/lib/spaceship-prompt
+	url = https://github.com/spaceship-prompt/spaceship-prompt
