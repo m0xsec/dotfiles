@@ -19,3 +19,6 @@
 [submodule "zsh/lib/spaceship-prompt"]
 	path = zsh/lib/spaceship-prompt
 	url = https://github.com/spaceship-prompt/spaceship-prompt
+[submodule "zsh/lib/zsh-syntax-highlighting"]
+	path = zsh/lib/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
