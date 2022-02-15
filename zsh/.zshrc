@@ -1,15 +1,16 @@
 #!/bin/zsh
 
 # ZSH Options / Settings
-#HISTFILE=${ZDOTDIR:-${HOME}}/.zhistory
-#HISTSIZE=50000
-#SAVEHIST=50000
+HISTFILE=${ZDOTDIR:-${HOME}}/.zhistory
+HISTSIZE=50000
+SAVEHIST=50000
 #setopt extended_history # Timestamps
-#setopt inc_append_history # Real time saves
+setopt inc_append_history # Real time saves
 #setopt share_history # Across shells
-unset HISTFILE
-unset HISTSIZE
-unset SAVEHIST
+#unset HISTFILE
+#unset HISTSIZE
+#unset SAVEHIST
+setopt hist_ignore_space
 setopt hist_ignore_all_dups # No dupes in history
 setopt hist_verify # Confirm !!
 setopt no_clobber # Enforce >! or >|
