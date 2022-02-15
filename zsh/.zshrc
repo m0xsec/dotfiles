@@ -91,6 +91,9 @@ if [[ $(uname) == 'Darwin' ]] {
   alias reset_systemui="defaults delete com.apple.systemuiserver && killall SystemUIServer"
 }
 
+# Kitty specific stuff
+alias icat="kitty +kitten icat"
+
 # direnv if it is installed
 if (( $+commands[direnv] )); then; . <(direnv hook zsh); fi
 

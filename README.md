@@ -14,7 +14,7 @@ git clone --recurse-submodules https://github.com/m0xxz/dotfiles ~/sandbox/dotfi
 ZDOTDIR=$HOME/sandbox/dotfiles/zsh
 export KITTY_CONFIG_DIRECTORY=$HOME/sandbox/dotfiles/kitty/
 export GOPATH=$HOME/sandbox/go
-export PATH=$GOPATH/bin:$HOME/.local/bin:$PATH
+export PATH=$GOPATH/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 export EDITOR=vim
 export PAGER=less
 export CLICOLOR=1
