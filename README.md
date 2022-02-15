@@ -12,6 +12,7 @@ git clone --recurse-submodules https://github.com/m0xxz/dotfiles ~/sandbox/dotfi
 #!/bin/zsh
 # ~/.zshenv exmaple, make changes as needed per system
 ZDOTDIR=$HOME/sandbox/dotfiles/zsh
+export KITTY_CONFIG_DIRECTORY=$HOME/sandbox/dotfiles/kitty/
 export GOPATH=$HOME/sandbox/go
 export PATH=$GOPATH/bin:$HOME/.local/bin:$PATH
 export EDITOR=vim
@@ -39,4 +40,19 @@ export CLICOLOR=1
 	rebase-last-five = "!b=\"$(git branch --no-color | cut -c3-)\" ; h=\"$(git rev-parse $b)\" ; echo \"Current branch: $b $h\" ; c=\"$(git rev-parse $b~4)\" ; echo \"Recreating $b branch with initial commit $c ...\" ; git checkout --orphan new-start $c ; git commit -C $c ; git rebase --onto new-start $c $b ; git branch -d new-start ; git gc"
 	squash-all = "!f(){ git reset $(git commit-tree -S HEAD^{tree} -m \"${1:-A new start}\");};f"
 
+```
+
+## kitty
+```
+# kitty.desktop file
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=kitty
+GenericName=Terminal emulator
+Comment=Fast, feature-rich, GPU based terminal
+TryExec=kitty
+Exec=kitty --config /home/m0x/sandbox/dotfiles/kitty/kitty.conf
+Icon=kitty
+Categories=System;TerminalEmulator;
 ```
