@@ -36,5 +36,5 @@ SPACESHIP_PROMPT_ORDER=(
 )
 
 # <3
-neofetch
-fortune
+if (( $+commands[neofetch] )); then; neofetch; fi
+if (( $+commands[fortune] )); then; fortune; fi
