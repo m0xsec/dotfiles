@@ -15,6 +15,11 @@ setopt hist_verify # Confirm !!
 setopt no_clobber # Enforce >! or >|
 zstyle ':completion:*' menu select
 
+# ZSH precmd (Setting window title)
+precmd () { 
+    print -Pn "\e]2;%n@%M | %~\a" 
+} 
+
 # User-scoped machine-local ZSH function path.
 # For example, on macOS, Brew's rustup-init puts binaries in ~/.cargo
 # ... which means /usr/local is the wrong place to add completions.
