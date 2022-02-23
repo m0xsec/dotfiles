@@ -94,6 +94,7 @@ if [[ $(uname) == 'Darwin' ]] {
 
 # Kitty specific stuff
 alias icat="kitty +kitten icat"
+alias ssh="kitty +kitten ssh"
 
 # direnv if it is installed
 if (( $+commands[direnv] )); then; . <(direnv hook zsh); fi
