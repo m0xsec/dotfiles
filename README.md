@@ -3,7 +3,7 @@
 dotfiles and other useful things <3
 
 ```shell
-git clone --recurse-submodules https://github.com/m0xxz/dotfiles ~/sandbox/dotfiles
+git clone --recurse-submodules https://github.com/m0xsec/dotfiles ~/sandbox/dotfiles
 ```
 
 ## zsh
