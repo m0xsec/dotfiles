@@ -37,4 +37,4 @@ SPACESHIP_PROMPT_ORDER=(
 
 # <3
 if (( $+commands[neofetch] )); then; neofetch; fi
-if (( $+commands[fortune] )); then; fortune; fi
+if (( $+commands[fortune] )); then; fortune /usr/share/fortune/cybersuntzu; fi
