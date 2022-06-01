@@ -30,7 +30,7 @@ export CLICOLOR=1
 	email = m0x@m0x.io
 	signingkey = 7A687F12E9A61F11!
 [credential]
-	helper = /usr/libexec/git-core/git-credential-libsecret
+	helper = libsecret
 [commit]
 	gpgsign = true
 [init]
