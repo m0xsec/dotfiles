@@ -44,6 +44,7 @@ prompt spaceship
 
 # ZSH Plugins
 fpath+=$ZDOTDIR/lib/zsh-completions/src
+fpath+=$ZDOTDIR/lib/taskfile-zsh-autocompletion/src
 fpath+=$ZDOTDIR/lib/
 
 . $ZDOTDIR/lib/gpg-agent/gpg-agent.zsh
@@ -93,8 +94,8 @@ if [[ $(uname) == 'Darwin' ]] {
 }
 
 # Kitty specific stuff
-alias icat="kitty +kitten icat"
-alias ssh="kitty +kitten ssh"
+#alias icat="kitty +kitten icat"
+#alias ssh="kitty +kitten ssh"
 
 # direnv if it is installed
 if (( $+commands[direnv] )); then; . <(direnv hook zsh); fi
@@ -102,3 +103,6 @@ if (( $+commands[direnv] )); then; . <(direnv hook zsh); fi
 # Don't rebuild on every new shell
 autoload -Uz compinit && compinit -C
 #autoload -U compinit && compinit
+
+# taskfile-zsh-autocompletion
+autoload -U _task && _task
