@@ -26,4 +26,6 @@ if status is-interactive
     set -g direnv_fish_mode eval_on_arrow
     direnv hook fish | source
 
+    # starship - https://starship.rs/
+    starship init fish | source
 end
